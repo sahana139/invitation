@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Engagement Ceremony</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Great+Vibes&display=swap');
+
+  body {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    background: #fdf6f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+  }
+
+  .card {
+    background: rgba(255,255,255,0.95);
+    border-radius: 30px;
+    max-width: 750px;
+    width: 100%;
+    padding: 60px 50px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+    border: 6px solid #d4af37; /* Outer golden border */
+    position: relative;
+  }
+
+  /* Inner decorative frame */
+  .card::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border: 2px dashed #d4af37;
+    border-radius: 25px;
+    pointer-events: none;
+  }
+
+  /* Corner floral decorations (simple circles for elegance) */
+  .corner {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #d4af37;
+  }
+  .corner.top-left { top: 10px; left: 10px; }
+  .corner.top-right { top: 10px; right: 10px; }
+  .corner.bottom-left { bottom: 10px; left: 10px; }
+  .corner.bottom-right { bottom: 10px; right: 10px; }
+
+  h1 {
+    font-size: 36px;
+    color: #7a4c2e;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #4b3b2a;
+    margin: 15px 0;
+  }
+
+  .divider {
+    margin: 40px auto;
+    width: 80px;
+    border-top: 3px solid;
+    border-image: linear-gradient(to right, #d4af37, #fcd34d) 1;
+  }
+
+  .couple {
+    font-family: 'Great Vibes', cursive;
+    font-size: 48px;
+    color: #b3541e;
+    margin: 50px 0;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  }
+
+  .and {
+    font-size: 36px;
+    color: #e63946;
+    margin: 0 10px;
+  }
+
+  .details {
+    margin: 35px 0;
+    font-size: 19px;
+    color: #3a2a1a;
+  }
+
+  .details a {
+    text-decoration: none;
+    color: #b3541e;
+    font-weight: bold;
+    border-bottom: 1px dashed #b3541e;
+    transition: 0.3s;
+  }
+
+  .details a:hover {
+    color: #d4af37;
+    border-bottom: 1px solid #d4af37;
+  }
+
+  .qr {
+    margin-top: 40px;
+  }
+
+  .qr img {
+    width: 130px;
+    height: 130px;
+    border: 2px solid #d4af37;
+    border-radius: 12px;
+    padding: 5px;
+    background: #fff;
+  }
+ .music-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #d4af37;
+      color: white;
+      border: none;
+      padding: 12px 18px;
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      font-weight: bold;
+    }
+
+    .music-btn:hover {
+      background: #fcd34d;
+    }
+
+  .footer {
+    margin-top: 50px;
+    font-style: italic;
+    font-size: 18px;
+    color: #4a3221;
+  }
+
+  @media (max-width: 600px) {
+    .card { padding: 50px 25px; }
+    h1 { font-size: 28px; }
+    .couple { font-size: 36px; }
+    .and { font-size: 28px; }
+    .details { font-size: 16px; }
+    .footer { font-size: 15px; }
+    .qr img { width: 100px; height: 100px; }
+  }
+</style>
+</head>
+<body>
+  <div class="card">
+    <!-- Corner decorations -->
+    <div class="corner top-left"></div>
+    <div class="corner top-right"></div>
+    <div class="corner bottom-left"></div>
+    <div class="corner bottom-right"></div>
+
+    <h1>💍 Engagement Ceremony</h1>
+     
+       
+    <p>Two hearts, two souls, one journey begins...<br>
+       With immense joy and blessings of the Almighty,<br>
+       we invite you to the engagement of</p>
+
+    <div class="divider"></div>
+
+    <div class="couple">Srijan Raj <span class="and">❤️</span> Meghana K</div>
+
+    <div class="divider"></div>
+
+    <div class="details">
+      <p>📅 Sunday, 07th December 2025</p>
+      <p>📍 Shree Rajarajeshwari Temple, Matanthabettu</p>
+      <p><a href="https://maps.app.goo.gl/9q2yevMBeUfYLMHh8" target="_blank">📌 View on Google Maps</a></p>
+    </div>
+
+    <div class="qr">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?data=https://maps.app.goo.gl/9q2yevMBeUfYLMHh8&size=150x150" alt="QR Code">
+    </div>
+ <button class="music-btn" onclick="toggleMusic()">🎵 Music</button>
+  <audio id="bgMusic" loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-sweet.mp3" type="audio/mpeg">
+  </audio>
+    <div class="footer">“Your gracious presence and heartfelt wishes will make our celebration truly special.”</div>
+    <script> const music = document.getElementById('bgMusic');
+    function toggleMusic() {
+      if(music.paused) music.play();
+      else music.pause();
+    }</script>
+  </div>
+</body>
+</html>
